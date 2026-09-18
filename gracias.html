@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videollamada agendada | Droppitec</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="root">
+
+    <section class="section section-badge">
+      <div class="inner">
+        <a class="badge" href="https://droppitec.com" target="_blank" rel="noopener">
+          <img src="assets/droppitec-logo-blanco.svg" alt="Droppitec" class="badge-logo">
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-thanks">
+      <div class="inner">
+        <div class="thanks-check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <p class="eyebrow">Listo</p>
+        <h1 class="h1">Tu videollamada quedó <span class="accent">agendada</span></h1>
+        <p class="lead">
+          Te enviamos la confirmación por email con el link de la reunión. Revisá también la carpeta de spam
+          por las dudas.
+        </p>
+
+        <ol class="steps steps-thanks">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h2 class="step-title">Agregala a tu calendario</h2>
+            <p class="step-text">En el email tenés el botón para sumarla a Google Calendar u Outlook y que te llegue el recordatorio.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h2 class="step-title">Tené a mano cómo vendés hoy</h2>
+            <p class="step-text">Lista de precios, cómo te llegan los pedidos, cuántos clientes mayoristas manejás. Con eso en 30 minutos sacamos un diagnóstico real.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h2 class="step-title">¿Necesitás cambiar el horario?</h2>
+            <p class="step-text">Desde el mismo email podés reprogramar o cancelar. O escribinos por WhatsApp y lo coordinamos.</p>
+          </li>
+        </ol>
+
+        <a class="btn btn-wa js-wa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="wa-icon"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+
+        <p class="thanks-back">
+          Mientras tanto, <a href="index.html#districen">mirá cómo quedó el sistema de Districen</a>.
+        </p>
+      </div>
+    </section>
+
+    <footer class="section section-footer">
+      <div class="inner">
+        <img src="assets/droppitec-logo-blanco.svg" alt="Droppitec" class="footer-logo">
+        <p class="footer-copy">© <span id="year"></span> Droppitec. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Conversión principal del embudo: llegó acá = agendó.
+    track('Schedule');
+  </script>
+</body>
+</html>
