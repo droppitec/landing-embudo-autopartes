@@ -1,6 +1,6 @@
 # Embudo — Sistemas para mayoristas de autopartes
 
-Landing de conversión (estilo VSL) para vender sistemas a medida a distribuidores mayoristas de autopartes. Sin build ni dependencias: HTML + CSS + JS estáticos.
+Landing de conversión (estilo VSL) para mayoristas de autopartes. Oferta: importador masivo de listas de proveedores + pedidos por WhatsApp, acoplados al ERP/sistema que el cliente ya tiene. Districen como caso de prueba. Sin build ni dependencias: HTML + CSS + JS estáticos.
 
 ## Estructura
 
@@ -40,6 +40,15 @@ Recomendado en la configuración del evento:
 | `PageView` | Al cargar cualquier página                      | Audiencias de retargeting.                        |
 | `Contact`  | Click en cualquier botón de WhatsApp            | Conversión secundaria.                            |
 | `Schedule` | Al llegar a `gracias.html` (después de reservar) | **Conversión principal.** Optimizar la campaña por este evento. |
+| `CalculadoraUsada` (custom) | Primera vez que el visitante toca la calculadora | Audiencia caliente para retargeting. |
+
+### Calculadora "Hacé la cuenta"
+
+Fórmula: `facturación mensual × suba de costos % × (días de atraso / 30)`. Los valores por defecto (50M / 4% / 7 días) se cambian en el HTML (`value=` de cada input en `#calc`).
+
+### Oferta piloto
+
+La sección `#piloto` promete **2 semanas / 3 proveedores / devolución del dinero**. Si el plazo real cambia, actualizar ahí y en el paso 03 de "Cómo trabajamos".
 
 ### Video de ventas (VSL)
 
