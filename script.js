@@ -4,7 +4,7 @@ const CONFIG = {
   // Número de WhatsApp sin "+" ni espacios.
   whatsapp: '5493512273833',
   whatsappMessage:
-    'Hola Droppitec, soy mayorista de autopartes. Quiero ver cómo conectar el importador de listas y los pedidos de WhatsApp a mi sistema.',
+    'Hola Droppitec, soy mayorista de autopartes. Quiero ver cómo cargar los catálogos de mis proveedores en mi sistema.',
 
   // Cal.com: la parte del link después de "cal.com/". Ej: "droppitec/videollamada-diagnostico".
   // Tiene que ser un TIPO DE EVENTO reservable (el que muestra el calendario con horarios),
@@ -94,35 +94,6 @@ if (calEmbed && CONFIG.calLink) {
 
   calEmbed.classList.add('is-active');
   calFallback.classList.add('is-hidden');
-}
-
-// ─── Calculadora ──────────────────────────────────
-// Pérdida mensual estimada = facturación × suba de costos × (días de atraso / 30).
-const calc = document.getElementById('calc');
-if (calc) {
-  const rev = document.getElementById('calc-rev');
-  const pct = document.getElementById('calc-pct');
-  const days = document.getElementById('calc-days');
-  const out = document.getElementById('calc-out');
-  let tracked = false;
-
-  const num = (el) => parseFloat(String(el.value).replace(/\./g, '').replace(',', '.')) || 0;
-  const fmt = (n) => '$ ' + Math.round(n).toLocaleString('es-AR');
-
-  const update = () => {
-    const loss = num(rev) * (num(pct) / 100) * (Math.min(num(days), 30) / 30);
-    out.textContent = fmt(loss);
-  };
-
-  // Re-formatea la facturación con puntos de miles al salir del campo.
-  rev.addEventListener('blur', () => { rev.value = num(rev).toLocaleString('es-AR'); });
-
-  [rev, pct, days].forEach((el) => el.addEventListener('input', () => {
-    update();
-    if (!tracked && window.fbq) { fbq('trackCustom', 'CalculadoraUsada'); tracked = true; }
-  }));
-  calc.addEventListener('submit', (e) => e.preventDefault());
-  update();
 }
 
 // ─── Año en el footer ─────────────────────────────
